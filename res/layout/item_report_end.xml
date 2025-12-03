@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:id="@+id/content"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingEnd="14dp">
+        <TextView
+            android:textSize="14dp"
+            android:textColor="@color/color_38311f"
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Pretending to be someone else"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/check_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/editor_selected"/>
+    </LinearLayout>
+    <View
+        android:background="@color/grey_f2f2f2"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/content"/>
+</RelativeLayout>

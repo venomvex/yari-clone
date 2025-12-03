@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_gravity="center"
+        android:background="@drawable/shape_line_b28c54_bg_6"
+        android:layout_width="82dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp">
+        <com.nebula.uikit.textview.RobotoBoldTextView
+            android:textColor="@color/color_b28c54"
+            android:gravity="center"
+            android:id="@+id/charm_id_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="123456"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+</LinearLayout>

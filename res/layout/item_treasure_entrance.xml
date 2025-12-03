@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center_vertical"
+    android:id="@+id/message_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/treasure_entrance"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <ImageView
+            android:id="@+id/treasure_icon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"/>
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/treasure_exp"
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+            android:layout_marginTop="6dp"
+            android:max="100"
+            android:progressDrawable="@drawable/small_treasure_exp_progress"
+            android:thumb="@null"
+            android:thumbOffset="0dp"
+            android:paddingStart="3dp"
+            android:paddingEnd="3dp"
+            android:splitTrack="false"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/lucky_reward_main_container"
+        android:background="@drawable/lucky_gift_reward_bg"
+        android:layout_width="280dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="91dp">
+        <com.nebula.uikit.textview.RobotoBoldTextView
+            android:textSize="18dp"
+            android:textColor="#a840e0"
+            android:id="@+id/lucky_reward_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get 10 Diamonds"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"/>
+        <com.nebula.uikit.textview.RobotoBoldTextView
+            android:textSize="12dp"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:id="@+id/lucky_reward_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get 10 Diamonds"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"/>
+    </LinearLayout>
+</LinearLayout>

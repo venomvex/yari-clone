@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:id="@+id/main_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/start_layout"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp">
+            <com.nebula.uikit.textview.RobotoRegularTextView
+                android:textSize="12dp"
+                android:textColor="@color/white"
+                android:ellipsize="end"
+                android:id="@+id/room_id_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:text="RoomId : 123456"
+                android:singleLine="true"/>
+            <com.nebula.uikit.textview.RobotoMediumTextView
+                android:textSize="14dp"
+                android:textColor="@color/color_ffdd7b"
+                android:id="@+id/tag_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="In Room"/>
+            <com.nebula.uikit.textview.RobotoRegularTextView
+                android:textSize="11dp"
+                android:textColor="@color/color_white_70"
+                android:id="@+id/time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                android:layout_marginBottom="11dp"
+                android:text="Time : 2023/09/22"/>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/record_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

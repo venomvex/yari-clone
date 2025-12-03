@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_gravity="center"
+        android:id="@+id/rl"
+        android:layout_width="80dp"
+        android:layout_height="156dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+        <com.funny.yari.ui.widget.RoundRectImageView
+            android:id="@+id/mode_item_container"
+            android:layout_width="74dp"
+            android:layout_height="152dp"
+            android:layout_marginTop="4dp"
+            android:layout_centerInParent="true"
+            app:cornerRadius="4dp"/>
+        <ImageView
+            android:id="@+id/mode_selected_btn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="6dp"
+            android:src="@drawable/editor_selected"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="6dp"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <com.nebula.uikit.textview.RobotoRegularTextView
+        android:textSize="13dp"
+        android:textColor="#ff333333"
+        android:layout_gravity="center"
+        android:id="@+id/mode_item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/yr_mic_9_people"/>
+</LinearLayout>
