@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="19dp"
+        android:textColor="#555452"
+        android:gravity="start|center_vertical"
+        android:id="@+id/change_host"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="Change Host"
+        android:paddingStart="27dp"/>
+    <View
+        android:id="@+id/split_line_reset_avator"
+        android:background="#ebeae6"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="27dp"
+        android:layout_marginRight="27dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="27dp"/>
+    <TextView
+        android:textSize="19dp"
+        android:textColor="#555452"
+        android:gravity="start|center_vertical"
+        android:id="@+id/change_device_id"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="Change Device ID"
+        android:paddingStart="27dp"/>
+</LinearLayout>

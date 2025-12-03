@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1">
+    <include
+        android:id="@+id/header"
+        android:visibility="gone"
+        layout="@layout/music_search_header"/>
+    <com.nebula.uikit.textview.RobotoRegularTextView
+        android:textSize="12dp"
+        android:textColor="@color/sub_title_text_color"
+        android:gravity="center_vertical"
+        android:id="@+id/music_count_text"
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:layout_marginStart="16dp"/>
+    <View
+        android:background="@color/line_color"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/music_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+</LinearLayout>
