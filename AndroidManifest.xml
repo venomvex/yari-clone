@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="146"
+    android:versionName="1.4.6"
+    android:compileSdkVersion="35"
+    android:compileSdkVersionCodename="15"
+    android:requiredSplitTypes="base__abi,base__density"
+    android:splitTypes=""
+    package="com.funny.yari"
+    platformBuildVersionCode="35"
+    platformBuildVersionName="15">
+    <uses-sdk
+        android:minSdkVersion="24"
+        android:targetSdkVersion="35"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO"/>
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE"/>
+    <uses-feature
+        android:glEsVersion="0x20000"
+        android:required="true"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"/>
+    <uses-permission android:name="android.permission.SENSOR_INFO"/>
+    <uses-permission android:name="com.funny.yari.permission.MIPUSH_RECEIVE"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <uses-permission android:name="android.permission.SENSOR_ENABLE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission
+        android:name="android.permission.BLUETOOTH"
+        android:maxSdkVersion="30"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <queries>
+        <intent>
+            <action android:name="com.appsflyer.referrer.INSTALL_PROVIDER"/>
+        </intent>
+        <package android:name="com.facebook.katana"/>
+        <intent>
+            <action android:name="com.android.vending.billing.InAppBillingService.BIND"/>
+        </intent>
+        <intent>
+            <action android:name="com.google.android.apps.play.billingtestcompanion.BillingOverrideService.BIND"/>
+        </intent>
+    </queries>
+    <queries>
+        <package android:name="com.facebook.katana"/>
+    </queries>
+    <queries>
+        <package android:name="com.instagram.android"/>
+    </queries>
+    <queries>
+        <package android:name="com.facebook.lite"/>
+    </queries>
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION"/>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+    <uses-permission android:name="com.samsung.android.mapsagent.permission.READ_APP_INFO"/>
+    <queries>
+        <package android:name="com.samsung.android.mapsagent"/>
+    </queries>
+    <uses-permission android:name="com.huawei.appmarket.service.commondata.permission.GET_COMMON_DATA"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_AD_ID"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <permission
+        android:name="com.funny.yari.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.funny.yari.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <application
+        android:theme="@style/AppTheme"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:name="com.funny.yari.YariApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:extractNativeLibs="true"
+        android:fullBackupContent="@xml/appsflyer_backup_rules"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:requestLegacyExternalStorage="true"
+        android:dataExtractionRules="@xml/appsflyer_data_extraction_rules">
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:authorities="com.funny.yari.provider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false"/>
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true"/>
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"/>
+        <meta-data
+            android:name="com.facebook.sdk.ClientToken"
+            android:value="@string/facebook_client_token"/>
+        <activity
+            android:theme="@style/FullyTranslucent"
+            android:label="@string/app_name"
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="screenSize|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@style/SplashAppTheme"
+            android:icon="@mipmap/ic_launcher"
+            android:name="com.funny.yari.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:hardwareAccelerated="true"
+            android:roundIcon="@mipmap/ic_launcher_round">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="yari"
+                    android:host="action"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name="com.funny.yari.YariFlutterBoostActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|layoutDirection|density|screenSize|screenLayout|orientation|keyboardHidden|keyboard|locale"
+            android:windowSoftInputMode="adjustResize"
+            android:hardwareAccelerated="true"/>
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name="com.funny.yari.billing.activity.WalletActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name="com.funny.yari.billing.activity.RechargeRecordActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name="com.funny.yari.ui.activity.svip.ActivitySvipCustomTheme"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name="com.funny.yari.ui.activity.svip.ActivitySvipCustomThemeEdit"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name="com.funny.yari.ui.activity.svip.ActivitySvipCustomThemeReview"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/WindowWebTheme"
+            android:name="com.funny.yari.web.EmptyWebView"/>
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name="com.funny.yari.ui.activity.ActivityBigImageList"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name="com.funny.yari.room.ui.MusicChooseActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name="com.funny.yari.billing.activity.WalletHistoryActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name="com.funny.yari.room.ui.ActivitySendImage"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name="com.funny.yari.room.ui.ActivityReviewImage"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name="com.funny.yari.billing.activity.WithdrawExchangeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.AppCompat.Light"
+            android:name="com.increase.applog.util.SimulateLaunchActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data
+                    android:scheme="rangersapplog.695489ee82d70404"
+                    android:host="rangersapplog"
+                    android:path="/picker"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name="com.funny.yari.room.ui.BlockListActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.funny.yari.BlockList"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/WindowWebTheme"
+            android:name="com.funny.yari.ui.widget.CommonDialogActivity"/>
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name="com.funny.yari.room.ui.RoomSettingsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name="com.funny.yari.web.WebViewActivity"
+            android:screenOrientation="portrait"
+            android:hardwareAccelerated="true"/>
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name="com.funny.yari.room.ui.KickOutHistoryActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name="com.funny.yari.ui.activity.BindAccountActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name="com.funny.yari.ui.activity.ActivityChangeAppLanguage"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name="com.funny.yari.ui.activity.ActivityBindPhoneVerifyCode"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysVisible"/>
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name="com.funny.yari.ui.activity.BindPhoneActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name="com.funny.yari.ui.activity.ActivityDeleteAccount"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name="com.funny.yari.ui.activity.ActivityDeleteAccountConfirm"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name="com.funny.yari.ui.activity.ActivityPhoneCodeSearch"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.funny.yari.PHONE_CODE_SEARCH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name="com.funny.yari.ui.activity.UnbindAccountActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name="com.funny.yari.ui.activity.BeforeDeleteAccountActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name="com.funny.yari.room.ui.view.ActivityCustomGiftReview"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name="com.funny.yari.ui.activity.ActivityReport"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name="com.funny.yari.room.ui.view.ActivityUploadCustomGift"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name="com.funny.yari.room.ui.ActivitySendImgPreview"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name="com.funny.yari.room.ui.ActivityRoomEffectSettings"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name="com.funny.yari.ui.activity.svip.ActivitySvipSettings"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name="com.funny.yari.ui.activity.redbag.ActivityRedBagDetail"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name="com.funny.yari.ui.activity.redbag.ActivityRedBagRecord"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/TransactionTheme"
+            android:name="com.funny.yari.im.ui.ActivityMessageList"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="com.funny.yari.MessageList"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name="com.funny.yari.im.ui.ActivityChat"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.funny.yari.Chat"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/AppTheme"
+            android:name="com.funny.yari.tab.TabMainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|layoutDirection|density|screenSize|screenLayout|orientation|keyboardHidden|keyboard|locale"
+            android:windowSoftInputMode="adjustResize"
+            android:hardwareAccelerated="true">
+            <meta-data
+                android:name="io.flutter.embedding.android.SplashScreenDrawable"
+                android:resource="@drawable/lb_background"/>
+        </activity>
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name="com.funny.yari.im.ui.ActivityRelation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name="com.funny.yari.im.ui.ActivityOfficialMessageDetail"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name="com.funny.yari.ui.activity.ActivityInvite"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateVisible">
+            <intent-filter>
+                <action android:name="com.funny.yari.Invite"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/AppNoActionBarTheme"
+            android:name="com.funny.yari.room.ui.RoomActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:keepScreenOn="true"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:hardwareAccelerated="true"/>
+        <service
+            android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService"
+            android:enabled="true"
+            android:exported="false"/>
+        <meta-data
+            android:name="flutterEmbedding"
+            android:value="2"/>
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_launcher_notification"/>
+        <service
+            android:name="com.funny.yari.room.ui.service.ForegroundService"
+            android:exported="false"
+            android:stopWithTask="true"
+            android:foregroundServiceType="microphone|mediaPlayback"/>
+        <service
+            android:name="com.funny.yari.jpush.MyFirebaseMessagingService"
+            android:exported="false"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.funny.yari.jpush.UpdateFCMTokenService"/>
+        <service
+            android:name="com.google.firebase.components.ComponentDiscoveryService"
+            android:exported="false"
+            android:directBootAware="true">
+            <meta-data
+                android:name="com.google.firebase.components:io.flutter.plugins.firebase.crashlytics.FlutterFirebaseAppRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.messaging.ktx.FirebaseMessagingLegacyRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.crashlytics.FirebaseCrashlyticsKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.sessions.FirebaseSessionsRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <service
+            android:name="com.increase.onekit.component.ComponentDiscoveryService"
+            android:exported="false">
+            <meta-data
+                android:name="com.increase.applog.onekit.AnalyticsComponentRegistrar"
+                android:value="com.increase.onekit.component.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.increase.applog.onekit.DeviceComponentRegistrar"
+                android:value="com.increase.onekit.component.ComponentRegistrar"/>
+        </service>
+        <activity android:name="com.increase.applog.migrate.MigrateDetectorActivity"/>
+        <receiver
+            android:name="com.increase.applog.collector.Collector"
+            android:enabled="true"
+            android:exported="false"/>
+        <provider
+            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+            android:exported="false"
+            android:authorities="com.funny.yari.flutter.image_provider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/flutter_image_picker_file_paths"/>
+        </provider>
+        <service
+            android:name="com.google.android.gms.metadata.ModuleDependencies"
+            android:enabled="false"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.metadata.MODULE_DEPENDENCIES"/>
+            </intent-filter>
+            <meta-data
+                android:name="photopicker_activity:0:required"
+                android:value=""/>
+        </service>
+        <activity
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+            android:exported="false"/>
+        <activity
+            android:theme="@style/EasyPermissions.Transparent"
+            android:label=""
+            android:name="pub.devrel.easypermissions.AppSettingsDialogHolderActivity"
+            android:exported="false"/>
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:exported="false"
+            android:directBootAware="true"/>
+        <receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+            <meta-data
+                android:name="com.google.android.gms.cloudmessaging.FINISHED_AFTER_HANDLED"
+                android:value="true"/>
+        </receiver>
+        <service
+            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+            android:exported="false"
+            android:directBootAware="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <property
+            android:name="android.adservices.AD_SERVICES_CONFIG"
+            android:resource="@xml/ga_ad_services_config"/>
+        <service
+            android:name="com.google.firebase.sessions.SessionLifecycleService"
+            android:enabled="true"
+            android:exported="false"/>
+        <activity android:name="com.facebook.CustomTabMainActivity"/>
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="fbconnect"
+                    android:host="cct.com.funny.yari"/>
+            </intent-filter>
+        </activity>
+        <meta-data
+            android:name="com.google.android.play.billingclient.version"
+            android:value="7.1.1"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.android.billingclient.api.ProxyBillingActivity"
+            android:exported="false"
+            android:configChanges="screenSize|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.android.billingclient.api.ProxyBillingActivityV2"
+            android:exported="false"
+            android:configChanges="screenSize|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"/>
+        <service
+            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+            android:exported="true"/>
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true"
+            android:exported="false"/>
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false"/>
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="true"
+            android:exported="false"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"/>
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:exported="false"
+            android:authorities="com.funny.yari.firebaseinitprovider"
+            android:initOrder="100"
+            android:directBootAware="true"/>
+        <provider
+            android:name="com.facebook.internal.FacebookInitProvider"
+            android:exported="false"
+            android:authorities="com.funny.yari.FacebookInitProvider"/>
+        <receiver
+            android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.facebook.AuthenticationTokenManager.CurrentAuthenticationTokenChangedBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.facebook.sdk.ACTION_CURRENT_AUTHENTICATION_TOKEN_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <uses-library
+            android:name="android.ext.adservices"
+            android:required="false"/>
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:exported="false"
+            android:authorities="com.funny.yari.androidx-startup">
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+                android:value="androidx.startup"/>
+        </provider>
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false"/>
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false"/>
+        <meta-data
+            android:name="com.bumptech.glide.integration.webp.WebpGlideModule"
+            android:value="GlideModule"/>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+        <service
+            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+            android:exported="false">
+            <meta-data
+                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+                android:value="cct"/>
+        </service>
+        <receiver android:name="com.nebula.rtm.base.NetWorkStateReceiver"/>
+        <provider
+            android:name="org.extra.tools.ContextProvider"
+            android:exported="false"
+            android:authorities="com.funny.yari.org.libpag.contextprovider"/>
+        <receiver
+            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+            android:permission="android.permission.DUMP"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="false"/>
+        <receiver
+            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+            android:exported="false"/>
+        <activity
+            android:theme="@style/Theme.PlayCore.Transparent"
+            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+            android:exported="false"
+            android:stateNotNeeded="true"/>
+        <meta-data
+            android:name="aia-compat-api-min-version"
+            android:value="1"/>
+        <activity
+            android:name="com.pairip.licensecheck.LicenseActivity"
+            android:exported="false"/>
+        <provider
+            android:name="com.pairip.licensecheck.LicenseContentProvider"
+            android:exported="false"
+            android:authorities="com.funny.yari.com.pairip.licensecheck.LicenseContentProvider"/>
+        <meta-data
+            android:name="com.android.vending.splits.required"
+            android:value="true"/>
+        <meta-data
+            android:name="com.android.stamp.source"
+            android:value="https://play.google.com/store"/>
+        <meta-data
+            android:name="com.android.stamp.type"
+            android:value="STAMP_TYPE_DISTRIBUTION_APK"/>
+        <meta-data
+            android:name="com.android.vending.splits"
+            android:resource="@xml/splits0"/>
+        <meta-data
+            android:name="com.android.vending.derived.apk.id"
+            android:value="2"/>
+    </application>
+    <uses-permission android:name="com.android.vending.CHECK_LICENSE"/>
+</manifest>
