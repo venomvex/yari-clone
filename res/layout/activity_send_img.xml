@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/colorBlack"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="434dp"
+        android:layout_centerInParent="true"/>
+    <com.nebula.uikit.textview.RobotoRegularTextView
+        android:textSize="14dp"
+        android:textColor="@color/colorWhite"
+        android:gravity="center"
+        android:id="@+id/cancel_btn"
+        android:layout_width="64dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/yr_cancel"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="12dp"/>
+    <com.nebula.uikit.textview.RobotoRegularTextView
+        android:textSize="14dp"
+        android:textColor="@color/black_333333"
+        android:gravity="center"
+        android:id="@+id/send_btn"
+        android:background="@drawable/s_gradient_ffffef3d_liner_ffffcc02_22"
+        android:layout_width="64dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/yr_tab_gift_send"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="12dp"
+        android:layout_alignParentEnd="true"/>
+</RelativeLayout>

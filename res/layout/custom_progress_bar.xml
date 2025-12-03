@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.nebula.uikit.textview.RobotoRegularTextView
+        android:textSize="14dp"
+        android:textColor="#ffc000"
+        android:gravity="center_horizontal"
+        android:id="@+id/progress_num"
+        android:background="@drawable/common_process_indicator_bg_web"
+        android:paddingTop="2dp"
+        android:layout_width="42dp"
+        android:layout_height="28dp"
+        android:text="0%"/>
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/process_exp"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:maxHeight="16dp"
+        android:max="100"
+        android:progress="0"
+        android:progressDrawable="@drawable/common_progress_bg"
+        android:minHeight="16dp"
+        android:thumb="@null"
+        android:layout_centerVertical="true"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:layout_marginStart="98dp"
+        android:layout_marginEnd="98dp"
+        android:splitTrack="false"/>
+</LinearLayout>

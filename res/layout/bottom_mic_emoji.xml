@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@drawable/t_radius_white_bg"
+    android:paddingTop="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="255dp">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/emoji_list"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"/>
+    <include
+        android:id="@+id/loading_view"
+        layout="@layout/dialog_loading"/>
+</LinearLayout>

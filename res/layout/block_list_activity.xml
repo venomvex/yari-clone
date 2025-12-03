@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/head_bar"
+        layout="@layout/include_layout_header"/>
+    <TextView
+        android:textSize="12dp"
+        android:textColor="@color/grey_9b9ca1"
+        android:gravity="center"
+        android:id="@+id/no_data"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/yr_no_kick_history"
+        android:drawableTop="@drawable/common_empty"
+        android:drawablePadding="10dp"
+        android:layout_centerInParent="true"/>
+    <com.funny.yari.ui.widget.pulltorefresh.PullToRefreshListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:listSelector="#00000000"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/item_split_line_color"
+        android:dividerHeight="1px"
+        android:layout_below="@+id/head_bar"
+        android:footerDividersEnabled="false"/>
+</RelativeLayout>
