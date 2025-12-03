@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <WebView
+        android:id="@+id/web_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.funny.yari.web.LoadingView
+        android:id="@+id/loading_web"
+        android:background="@color/colorWhite"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <View
+        android:id="@+id/cover_view"
+        android:background="#ffffff"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:progress="0"
+        android:progressDrawable="@drawable/p_loading_style"
+        android:layout_alignParentTop="true"
+        style="?android:attr/progressBarStyleHorizontal"/>
+</RelativeLayout>

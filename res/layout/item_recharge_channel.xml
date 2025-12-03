@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:id="@+id/channel_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_marginTop="8dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="15dp"
+            android:layout_marginEnd="10dp">
+            <ImageView
+                android:id="@+id/channel_icon"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginEnd="2dp"/>
+            <com.nebula.uikit.textview.RobotoRegularTextView
+                android:textSize="12dp"
+                android:textColor="@color/black_333333"
+                android:id="@+id/channel_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"/>
+        </LinearLayout>
+        <com.nebula.uikit.textview.RobotoMediumTextView
+            android:textSize="10dp"
+            android:textColor="@color/colorWhite"
+            android:id="@+id/discount"
+            android:background="@drawable/s_rectangle_ff8f77_to_fe5750_4_bg"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp"
+            android:layout_alignEnd="@+id/channel_layout"/>
+    </RelativeLayout>
+</LinearLayout>

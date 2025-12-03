@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.nebula.uikit.svgaplayer.SVGAImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/equity"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="14dp"
+        android:adjustViewBounds="true"
+        app:clearsAfterStop="false"/>
+    <com.nebula.uikit.textview.RobotoRegularTextView
+        android:textSize="12dp"
+        android:textColor="@color/gray_666666"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/equity_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/yr_room_emoji"/>
+</LinearLayout>

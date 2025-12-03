@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:layout_gravity="center_horizontal"
+    android:orientation="horizontal"
+    android:background="@color/color_edf2f0"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.nebula.uikit.textview.RobotoBoldTextView
+            android:textSize="16dp"
+            android:textColor="@color/gray_666666"
+            android:gravity="start|center_vertical"
+            android:id="@+id/header_text"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:textAlignment="viewStart"
+            android:paddingStart="16dp"/>
+    </RelativeLayout>
+</LinearLayout>

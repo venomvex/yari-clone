@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.nebula.uikit.textview.RobotoBoldTextView
+        android:textColor="#ff774225"
+        android:gravity="center"
+        android:id="@+id/value_text"
+        android:background="#ffffeca2"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:adjustViewBounds="true"
+        android:minWidth="70dp"/>
+    <View
+        android:layout_width="6dp"
+        android:layout_height="1px"/>
+</LinearLayout>

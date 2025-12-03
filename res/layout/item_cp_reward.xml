@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="108dp"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp">
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="84dp"
+            android:layout_height="84dp">
+            <com.nebula.uikit.svgaplayer.SVGAImageView
+                android:id="@+id/reward_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside"
+                app:clearsAfterStop="false"/>
+        </LinearLayout>
+        <com.nebula.uikit.textview.RobotoMediumTextView
+            android:textSize="13dp"
+            android:textColor="@color/white"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:id="@+id/reward_text"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:text="@string/yr_room_emoji"
+            android:singleLine="true"
+            android:marqueeRepeatLimit="marquee_forever"/>
+    </LinearLayout>
+</LinearLayout>
