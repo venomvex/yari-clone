@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_alignParentBottom="true"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp">
+    <com.nebula.uikit.svgaplayer.SVGAImageView
+        android:id="@+id/send_gift_entrance"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="6dp"
+        app:autoPlay="true"
+        app:loopCount="-1"
+        app:source="gift_icon.svga"/>
+    <ImageView
+        android:id="@+id/back_to_normal_btn"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:src="@drawable/game_back_to_normal"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="6dp"
+        android:layout_alignParentEnd="true"/>
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="bottom|center_horizontal"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/img_icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/guard_gold_icon"
+        android:layout_marginEnd="1.5dp"/>
+    <TextView
+        android:textSize="12dp"
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1.5dp"/>
+</LinearLayout>

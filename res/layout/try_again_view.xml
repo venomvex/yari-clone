@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/common_empty"/>
+    <com.nebula.uikit.textview.RobotoRegularTextView
+        android:textSize="14dp"
+        android:textColor="@color/grey_c2c4cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="@string/yr_loading_failed_please_try_again"/>
+    <com.nebula.uikit.textview.RobotoMediumTextView
+        android:textColor="@color/black_333333"
+        android:gravity="center"
+        android:id="@+id/retry_btn"
+        android:background="@drawable/b_corners_ffffef3d_linear_ffffcc02_15"
+        android:layout_width="84dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/yr_try_again"/>
+</LinearLayout>
