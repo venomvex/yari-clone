@@ -121,6 +121,82 @@ cp -r assests/fe-game-greedy-yr ../auravoicechatdoc/android/app/src/main/assets/
 | `RoomLockScreen.kt` | `dialog_lock_room_pwd.xml` | LOW | `/rooms/{id}/lock` |
 | `BlockListScreen.kt` | `block_list_activity.xml` | LOW | `/users/blocked` |
 
+### 2.3 Aura-Exclusive Features (NOT in Yari)
+
+These are unique features that Aura has but Yari doesn't - they must be preserved and enhanced:
+
+| Screen | Description | Priority | Backend Endpoint |
+|--------|-------------|----------|------------------|
+| `EarningScreen.kt` | User earning dashboard | **CRITICAL** | `/earning/dashboard` |
+| `EarningTargetsScreen.kt` | Available earning targets | **CRITICAL** | `/earning/targets` |
+| `EarningHistoryScreen.kt` | Completed earnings history | **CRITICAL** | `/earning/history` |
+| `EarningWithdrawScreen.kt` | Withdraw earnings to bank/wallet | **CRITICAL** | `/earning/withdraw` |
+| `GuideApplicationScreen.kt` | Apply to become a Guide | HIGH | `/guide/apply` |
+| `GuideDashboardScreen.kt` | Guide's earning dashboard | HIGH | `/guide/dashboard` |
+| `GuideTasksScreen.kt` | Daily jar tasks for Guides | HIGH | `/guide/tasks` |
+| `GuideTargetSheetScreen.kt` | Monthly target sheet | HIGH | `/guide/targets` |
+| `AdminPanelScreen.kt` | Admin dashboard | HIGH | `/admin/dashboard` |
+| `ResellerPanelScreen.kt` | Reseller coin selling | HIGH | `/reseller/dashboard` |
+| `OwnerPanelScreen.kt` | App owner controls | HIGH | `/owner/dashboard` |
+| `CountryAdminScreen.kt` | Country-specific admin | MEDIUM | `/admin/country` |
+| `CustomerSupportScreen.kt` | Support ticket system | MEDIUM | `/support/tickets` |
+
+---
+
+## Phase 2.5: Earning System Details (Aura Exclusive)
+
+### Earning Targets (Users Can Earn Real Money)
+
+**Gift Sending Targets:**
+| Target | Coins Required | Time | Earning |
+|--------|----------------|------|---------|
+| Bronze | 1,000,000 | 7 days | $0.50 |
+| Silver | 5,000,000 | 7 days | $2.50 |
+| Gold | 10,000,000 | 10 days | $5.00 |
+| Platinum | 25,000,000 | 10 days | $12.50 |
+| Diamond | 50,000,000 | 14 days | $25.00 |
+| Elite | 100,000,000 | 14 days | $50.00 |
+| Master | 500,000,000 | 30 days | $250.00 |
+| Legend | 1,000,000,000 | 30 days | $500.00 |
+
+**Room Activity Targets:**
+| Target | Requirement | Time | Earning |
+|--------|-------------|------|---------|
+| Active Host | Host 20 hours | 7 days | $1.00 |
+| Super Host | Host 50 hours | 14 days | $3.00 |
+| Elite Host | Host 100 hours | 30 days | $7.50 |
+| Room Star | 1,000 unique visitors | 7 days | $2.00 |
+| Room Legend | 10,000 unique visitors | 30 days | $15.00 |
+
+### Guide System (Female Guides Earn Money)
+
+**Eligibility:**
+- Female only, Level 20+, 30+ days account age
+- KYC verified, Room owner, 50+ hours activity
+- No violations
+
+**Daily Jar Tasks:**
+| Task | Requirement | Points |
+|------|-------------|--------|
+| Open Room | Open for visitors | 10 |
+| Room Time | 2+ hours | 15 |
+| Welcome Users | Greet 10 visitors | 10 |
+| Mic Activity | 30+ min on mic | 15 |
+| Send Messages | 20+ messages | 10 |
+| Gift Activity | Receive 5+ gifts | 15 |
+| Retention | Keep 5 users 30 min | 20 |
+| Room Fun | Play 3+ games | 15 |
+
+**Weekly Coin Flow Targets:**
+| Tier | Coins Received | Bonus |
+|------|----------------|-------|
+| Bronze | 500,000 | $0.25 |
+| Silver | 2,000,000 | $1.00 |
+| Gold | 5,000,000 | $2.50 |
+| Platinum | 10,000,000 | $5.00 |
+| Diamond | 25,000,000 | $12.50 |
+| Elite | 50,000,000 | $25.00 |
+
 ---
 
 ## Phase 3: Complete File Structure
@@ -324,9 +400,43 @@ android/app/src/main/java/com/aura/voicechat/
     │   ├── RankingScreen.kt
     │   └── RankingViewModel.kt
     │
-    └── kyc/
-        ├── KycScreen.kt
-        └── KycViewModel.kt
+    ├── kyc/
+    │   ├── KycScreen.kt
+    │   └── KycViewModel.kt
+    │
+    ├── earning/                    # AURA EXCLUSIVE - Not in Yari
+    │   ├── EarningScreen.kt
+    │   ├── EarningViewModel.kt
+    │   ├── EarningTargetsScreen.kt
+    │   ├── EarningHistoryScreen.kt
+    │   ├── EarningWithdrawScreen.kt
+    │   └── components/
+    │       ├── TargetCard.kt
+    │       ├── ProgressBar.kt
+    │       └── WithdrawDialog.kt
+    │
+    ├── guide/                      # AURA EXCLUSIVE - Female Guide System
+    │   ├── GuideApplicationScreen.kt
+    │   ├── GuideApplicationViewModel.kt
+    │   ├── GuideDashboardScreen.kt
+    │   ├── GuideDashboardViewModel.kt
+    │   ├── GuideTasksScreen.kt
+    │   ├── GuideTasksViewModel.kt
+    │   ├── GuideTargetSheetScreen.kt
+    │   └── components/
+    │       ├── JarTaskItem.kt
+    │       ├── TargetProgressCard.kt
+    │       └── GuideFrame.kt
+    │
+    └── admin/                      # AURA EXCLUSIVE - Admin Panels
+        ├── AdminPanelScreen.kt
+        ├── AdminViewModel.kt
+        ├── ResellerPanelScreen.kt
+        ├── ResellerViewModel.kt
+        ├── OwnerPanelScreen.kt
+        ├── OwnerViewModel.kt
+        ├── CountryAdminScreen.kt
+        └── CustomerSupportScreen.kt
 ```
 
 ---
@@ -366,16 +476,27 @@ android/app/src/main/java/com/aura/voicechat/
 | Day 20 | Implement ReferralScreen |
 | Day 21 | Testing and bug fixes |
 
-### Week 4: Polish & Launch
+### Week 4: Earning System & Guides (AURA EXCLUSIVE)
 | Day | Tasks |
 |-----|-------|
-| Day 22 | Add CinemaScreen |
-| Day 23 | Implement MedalsScreen |
-| Day 24 | Add EventsScreen, RedEnvelope |
-| Day 25 | Settings, About screens |
-| Day 26 | Full app testing |
-| Day 27 | Bug fixes, optimization |
-| Day 28 | Release preparation |
+| Day 22 | Implement EarningScreen, EarningTargetsScreen |
+| Day 23 | Add EarningHistoryScreen, EarningWithdrawScreen |
+| Day 24 | Implement GuideApplicationScreen |
+| Day 25 | Add GuideDashboardScreen, GuideTasksScreen |
+| Day 26 | Implement GuideTargetSheetScreen |
+| Day 27 | Add Admin/Reseller/Owner panels |
+| Day 28 | Testing earning flows |
+
+### Week 5: Polish & Launch
+| Day | Tasks |
+|-----|-------|
+| Day 29 | Add CinemaScreen |
+| Day 30 | Implement MedalsScreen |
+| Day 31 | Add EventsScreen, RedEnvelope |
+| Day 32 | Settings, About screens |
+| Day 33 | Full app testing |
+| Day 34 | Bug fixes, optimization |
+| Day 35 | Release preparation |
 
 ---
 
@@ -505,6 +626,54 @@ GET  /rankings/users
 GET  /rankings/rooms
 GET  /rankings/gifts
 GET  /rankings/cp
+```
+
+### Earning System (AURA EXCLUSIVE)
+```
+GET  /earning/dashboard
+GET  /earning/targets
+GET  /earning/targets/active
+POST /earning/targets/{id}/claim
+GET  /earning/history
+GET  /earning/balance
+POST /earning/withdraw
+GET  /earning/withdraw/methods
+GET  /earning/withdraw/history
+```
+
+### Guide System (AURA EXCLUSIVE)
+```
+GET  /guide/eligibility
+POST /guide/apply
+GET  /guide/application/status
+GET  /guide/dashboard
+GET  /guide/tasks/daily
+POST /guide/tasks/{id}/complete
+GET  /guide/targets/monthly
+GET  /guide/targets/weekly
+POST /guide/targets/{id}/claim
+GET  /guide/earnings
+GET  /guide/frame
+```
+
+### Admin Panels (AURA EXCLUSIVE)
+```
+GET  /admin/dashboard
+GET  /admin/users
+PUT  /admin/users/{id}/ban
+PUT  /admin/users/{id}/verify
+GET  /admin/reports
+GET  /admin/analytics
+GET  /reseller/dashboard
+GET  /reseller/inventory
+POST /reseller/sell
+GET  /reseller/transactions
+GET  /owner/dashboard
+PUT  /owner/config
+GET  /owner/revenue
+GET  /support/tickets
+POST /support/tickets
+PUT  /support/tickets/{id}/resolve
 ```
 
 ---
