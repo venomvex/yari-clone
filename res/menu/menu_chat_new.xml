@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_invite_package"
+        android:title="@string/yr_invitation_package"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_go_to_home_page"
+        android:title="@string/yr_go_to_home_page"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_block"
+        android:title="@string/yr_block_block"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_reset_bg"
+        android:visible="false"
+        android:title="@string/yr_friend_reset_chat_background"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_report"
+        android:title="@string/yr_report"
+        app:showAsAction="never"/>
+</menu>
